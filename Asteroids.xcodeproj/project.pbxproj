@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		FF95CF73218C4FE500EC4BFB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF95CF72218C4FE500EC4BFB /* AppDelegate.swift */; };
-		FF95CF75218C4FE500EC4BFB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF95CF74218C4FE500EC4BFB /* ViewController.swift */; };
+		FF95CF75218C4FE500EC4BFB /* AsteroidsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF95CF74218C4FE500EC4BFB /* AsteroidsViewController.swift */; };
 		FF95CF78218C4FE500EC4BFB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF95CF76218C4FE500EC4BFB /* Main.storyboard */; };
 		FF95CF7A218C4FE700EC4BFB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF95CF79218C4FE700EC4BFB /* Assets.xcassets */; };
 		FF95CF7D218C4FE700EC4BFB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF95CF7B218C4FE700EC4BFB /* LaunchScreen.storyboard */; };
@@ -40,7 +40,7 @@
 /* Begin PBXFileReference section */
 		FF95CF6F218C4FE500EC4BFB /* Asteroids.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Asteroids.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF95CF72218C4FE500EC4BFB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FF95CF74218C4FE500EC4BFB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FF95CF74218C4FE500EC4BFB /* AsteroidsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsteroidsViewController.swift; sourceTree = "<group>"; };
 		FF95CF77218C4FE500EC4BFB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FF95CF79218C4FE700EC4BFB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FF95CF7C218C4FE700EC4BFB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -106,7 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				FF95CFA7218C55D700EC4BFB /* AsteroidFieldView.swift */,
-				FF95CF74218C4FE500EC4BFB /* ViewController.swift */,
+				FF95CF74218C4FE500EC4BFB /* AsteroidsViewController.swift */,
 				FF95CF76218C4FE500EC4BFB /* Main.storyboard */,
 				FF95CF79218C4FE700EC4BFB /* Assets.xcassets */,
 				FF95CFA0218C504400EC4BFB /* Supporting Files */,
@@ -276,7 +276,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FF95CF75218C4FE500EC4BFB /* ViewController.swift in Sources */,
+				FF95CF75218C4FE500EC4BFB /* AsteroidsViewController.swift in Sources */,
 				FF95CFA4218C53A800EC4BFB /* CoreGraphicsExtensions.swift in Sources */,
 				FF95CFA8218C55D700EC4BFB /* AsteroidFieldView.swift in Sources */,
 				FF95CF73218C4FE500EC4BFB /* AppDelegate.swift in Sources */,
