@@ -10,18 +10,18 @@ import UIKit
 
 class AsteroidFieldView: UIView
 {
-//    var asteroidBehavior: AsteroidBehavior? {
-//        didSet {
-//            for asteroid in asteroids {
-//                oldValue?.removeAsteroid(asteroid)
-//                asteroidBehavior?.addAsteroid(asteroid)
-//            }
-//        }
-//    }
-//
-//    private var asteroids: [AsteroidView] {
-//        return subviews.flatMap { $0 as? AsteroidView }
-//    }
+    var asteroidBehaviour: AsteroidBehaviour? {
+        didSet {
+            for asteroid in asteroids {
+                oldValue?.removeAsteroid(asteroid)
+                asteroidBehaviour?.addAsteroid(asteroid)
+            }
+        }
+    }
+
+    private var asteroids: [AsteroidView] {
+        return subviews.compactMap { $0 as? AsteroidView }
+    }
     
     var scale: CGFloat = 0.002
     var minAsteroidSize: CGFloat = 0.25
@@ -37,7 +37,7 @@ class AsteroidFieldView: UIView
                 asteroid.frame.origin = bounds.randomPoint
             } while !exclusionZone.isEmpty && asteroid.frame.intersects(exclusionZone)
             addSubview(asteroid)
-            asteroidBehavior?.addAsteroid(asteroid)
+            asteroidBehaviour?.addAsteroid(asteroid)
         }
     }
 }

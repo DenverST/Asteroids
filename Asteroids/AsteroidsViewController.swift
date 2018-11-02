@@ -13,15 +13,27 @@ class AsteroidsViewController: UIViewController
     
     private var asteroidField: AsteroidFieldView!
     
+    private lazy var animator: UIDynamicAnimator = UIDynamicAnimator(referenceView: self.asteroidField)
+    
+    private var asteroidBehaviour = AsteroidBehaviour()
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         initializeIfNeeded()
+        animator.addBehavior(asteroidBehaviour)
+        asteroidBehaviour.pushAllAsteroids()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        animator.removeBehavior(asteroidBehaviour)
     }
     
     private func initializeIfNeeded() {
         if asteroidField == nil {
             asteroidField = AsteroidFieldView(frame: CGRect(center: self.view.bounds.mid, size: view.bounds.size))
             view.addSubview(asteroidField)
+            asteroidField.asteroidBehaviour = asteroidBehaviour
             asteroidField.addAsteroids(count: Constants.initialAsteroidCount)
             
         }
