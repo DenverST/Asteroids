@@ -97,12 +97,10 @@
 		FF95CF71218C4FE500EC4BFB /* Asteroids */ = {
 			isa = PBXGroup;
 			children = (
-				FF95CF72218C4FE500EC4BFB /* AppDelegate.swift */,
 				FF95CF74218C4FE500EC4BFB /* ViewController.swift */,
 				FF95CF76218C4FE500EC4BFB /* Main.storyboard */,
 				FF95CF79218C4FE700EC4BFB /* Assets.xcassets */,
-				FF95CF7B218C4FE700EC4BFB /* LaunchScreen.storyboard */,
-				FF95CF7E218C4FE700EC4BFB /* Info.plist */,
+				FF95CFA0218C504400EC4BFB /* Supporting Files */,
 			);
 			path = Asteroids;
 			sourceTree = "<group>";
@@ -123,6 +121,16 @@
 				FF95CF94218C4FE700EC4BFB /* Info.plist */,
 			);
 			path = AsteroidsUITests;
+			sourceTree = "<group>";
+		};
+		FF95CFA0218C504400EC4BFB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FF95CF72218C4FE500EC4BFB /* AppDelegate.swift */,
+				FF95CF7B218C4FE700EC4BFB /* LaunchScreen.storyboard */,
+				FF95CF7E218C4FE700EC4BFB /* Info.plist */,
+			);
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -434,7 +442,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7825C7P6ZZ;
-				INFOPLIST_FILE = Asteroids/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Asteroids/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -452,7 +460,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7825C7P6ZZ;
-				INFOPLIST_FILE = Asteroids/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Asteroids/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
