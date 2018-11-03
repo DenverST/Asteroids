@@ -8,13 +8,14 @@
 
 import UIKit
 
-class AsteroidBehaviour: UIDynamicBehavior
+class AsteroidBehaviour: UIDynamicBehavior, UICollisionBehaviorDelegate
 {
     
     private lazy var collider: UICollisionBehavior = {
         let behaviour = UICollisionBehavior()
         behaviour.collisionMode = .everything
         behaviour.translatesReferenceBoundsIntoBoundary = true
+        behaviour.collisionDelegate = self
         return behaviour
     }()
     
@@ -27,10 +28,26 @@ class AsteroidBehaviour: UIDynamicBehavior
         return behaviour
     }()
     
-    func setBounday(_ path: UIBezierPath?, named name: String, handler: ((Void)->Void)?) {
+    
+    // functions are just types, no different to a string, can be put in a dictionary
+    private var collisionHandlers = [String:()->(Void)]()
+    
+    func setBounday(_ path: UIBezierPath?, named name: String, handler: (()->Void)?) {
+        collisionHandlers[name] = nil
         collider.removeBoundary(withIdentifier: name as NSString)
         if path != nil {
             collider.addBoundary(withIdentifier: name as NSString, for: path!)
+            collisionHandlers[name] = handler
+        }
+    }
+    
+    func collisionBehavior(
+        _ behavior: UICollisionBehavior,
+        beganContactFor item: UIDynamicItem,
+        withBoundaryIdentifier identifier: NSCopying?,
+        at p: CGPoint) {
+        if let name = identifier as? String, let handler = collisionHandlers[name] {
+            handler()
         }
     }
     
