@@ -12,6 +12,7 @@ class AsteroidsViewController: UIViewController
 {
     
     private var asteroidField: AsteroidFieldView!
+    private var ship: SpaceshipView!
     
     private lazy var animator: UIDynamicAnimator = UIDynamicAnimator(referenceView: self.asteroidField)
     
@@ -33,6 +34,9 @@ class AsteroidsViewController: UIViewController
         if asteroidField == nil {
             asteroidField = AsteroidFieldView(frame: CGRect(center: self.view.bounds.mid, size: view.bounds.size))
             view.addSubview(asteroidField)
+            let shipSize = view.bounds.size.minEdge * Constants.shipSizeToMinBoundsEdgeRatio
+            ship = SpaceshipView(frame: CGRect(squareCenteredAt: asteroidField.center, size: shipSize))
+            view.addSubview(ship)
             asteroidField.asteroidBehaviour = asteroidBehaviour
             asteroidField.addAsteroids(count: Constants.initialAsteroidCount)
             

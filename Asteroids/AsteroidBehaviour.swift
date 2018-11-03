@@ -27,6 +27,13 @@ class AsteroidBehaviour: UIDynamicBehavior
         return behaviour
     }()
     
+    func setBounday(_ path: UIBezierPath?, named name: String, handler: ((Void)->Void)?) {
+        collider.removeBoundary(withIdentifier: name as NSString)
+        if path != nil {
+            collider.addBoundary(withIdentifier: name as NSString, for: path!)
+        }
+    }
+    
     override init() {
         super.init()
         addChildBehavior(collider)
